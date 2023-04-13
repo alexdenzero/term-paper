@@ -153,7 +153,7 @@ public class EmployeeBook {
     }
     public void  removeEmployeeId(int id) {
         ///удаляем сотрудника по id
-        for (int i = 0; i < employees.length; i++) {
+        for (int i = 0; i < employees.length && employees[i] != null; i++) {
             if (employees[i].getId() == id) {
                 employees[i] = null;
             }
@@ -161,7 +161,7 @@ public class EmployeeBook {
     }
     public void  removeEmployee(String nick) {
         ///удаляем сотрудника по имени
-        for (int i = 0; i < employees.length; i++) {
+        for (int i = 0; i < employees.length && employees[i] != null ; i++) {
             if (employees[i].getNick().equals(nick)) {
                 employees[i] = null;
             }
